@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		520DF02221662F7100A620C3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DF02121662F7100A620C3 /* main.swift */; };
+		D805EB04154DF92784D5BF42 /* Pods_Price.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42C0F6588C1300F945A877B /* Pods_Price.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		520DF01E21662F7100A620C3 /* Price */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Price; sourceTree = BUILT_PRODUCTS_DIR; };
 		520DF02121662F7100A620C3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		76565FBE1E4021379EF55CF0 /* Pods-Price.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Price.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Price/Pods-Price.debug.xcconfig"; sourceTree = "<group>"; };
+		83C68A5032327C6628BC9FEF /* Pods-Price.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Price.release.xcconfig"; path = "Pods/Target Support Files/Pods-Price/Pods-Price.release.xcconfig"; sourceTree = "<group>"; };
+		B42C0F6588C1300F945A877B /* Pods_Price.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Price.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +36,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D805EB04154DF92784D5BF42 /* Pods_Price.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0107FC647B4A55BFD7277417 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B42C0F6588C1300F945A877B /* Pods_Price.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DB313AACFB3955D606D919D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76565FBE1E4021379EF55CF0 /* Pods-Price.debug.xcconfig */,
+				83C68A5032327C6628BC9FEF /* Pods-Price.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		520DF01521662F7100A620C3 = {
 			isa = PBXGroup;
 			children = (
 				520DF02021662F7100A620C3 /* Price */,
 				520DF01F21662F7100A620C3 /* Products */,
+				3DB313AACFB3955D606D919D /* Pods */,
+				0107FC647B4A55BFD7277417 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +93,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 520DF02521662F7100A620C3 /* Build configuration list for PBXNativeTarget "Price" */;
 			buildPhases = (
+				E2B712D2354A6EE23F5C72DF /* [CP] Check Pods Manifest.lock */,
 				520DF01A21662F7100A620C3 /* Sources */,
 				520DF01B21662F7100A620C3 /* Frameworks */,
 				520DF01C21662F7100A620C3 /* CopyFiles */,
@@ -113,6 +138,31 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E2B712D2354A6EE23F5C72DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Price-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		520DF01A21662F7100A620C3 /* Sources */ = {
@@ -243,6 +293,7 @@
 		};
 		520DF02621662F7100A620C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76565FBE1E4021379EF55CF0 /* Pods-Price.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TW23A3H2PR;
@@ -253,6 +304,7 @@
 		};
 		520DF02721662F7100A620C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83C68A5032327C6628BC9FEF /* Pods-Price.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TW23A3H2PR;
